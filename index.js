@@ -4,25 +4,23 @@ var postcss = require('postcss')
 var isShorthand = require('is-css-shorthand')
 var shorthandExpand = require('css-shorthand-expand')
 
-module.exports = postcss.plugin('postcss-remove-prefixes', function () {
+module.exports = postcss.plugin('postcss-shorthand-expand', function () {
   return function removePrefixes (root, result) {
     root.walkRules(function (rule) {
       rule.walkDecls( function (declaration) {
         if (isShorthand(declaration.prop) && isSupportedShorthand(declaration.prop)) {
           try {
             var expandedDecls = shorthandExpand(declaration.prop, declaration.value)
+
+            Object.keys(expandedDecls).forEach(function (prop) {
+              rule.insertBefore(declaration, { prop: prop, value: expandedDecls[prop] })
+            })
+
+            declaration.remove()
           } catch (e) {
-            console.log(declaration.value)
-            console.log(declaration)
-            console.log(e)
-            throw e
+            result.warn('postcss-shorthand-expand failed to expand a property', { node: declaration })
             return
           }
-          Object.keys(expandedDecls).forEach(function (prop) {
-            rule.insertBefore(declaration, { prop: prop, value: expandedDecls[prop] })
-          })
-
-          declaration.remove()
         }
       })
     })

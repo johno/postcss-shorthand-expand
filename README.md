@@ -1,20 +1,20 @@
-# postcss-remove-shorthands [![Build Status](https://secure.travis-ci.org/johnotander/postcss-remove-shorthands.png?branch=master)](https://travis-ci.org/johnotander/postcss-remove-shorthands) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# postcss-shorthand-expand [![Build Status](https://secure.travis-ci.org/johnotander/postcss-shorthand-expand.png?branch=master)](https://travis-ci.org/johnotander/postcss-shorthand-expand) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
-Remove CSS shorthand properties from your CSS.
+Expand shorthand properties in your CSS.
 
 ## Installation
 
 ```bash
-npm install --save postcss-remove-shorthands
+npm install --save postcss-shorthand-expand
 ```
 
 ## Usage
 
 ```javascript
 var postcss = require('postcss')
-var removePrefixes = require('postcss-remove-prefixes')
+var shorthandExpand = require('postcss-shorthand-expand')
 
-postcss([ removePrefixes() ]).process(myCss).css
+postcss([ shorthandExpand() ]).process(myCss).css
 ```
 
 #### Input

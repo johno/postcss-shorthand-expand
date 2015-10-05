@@ -3,9 +3,9 @@
 var fs = require('fs')
 var test = require('tape')
 var postcss = require('postcss')
-var postcssRemoveShorthands = require('..')
+var shorthandExpand = require('..')
 
-test('postcss-remove-shorthands', function (t) {
+test('postcss-shorthand-expand', function (t) {
   t.plan(1)
 
   testFixture(t, 'input.css', 'output.css')
@@ -17,7 +17,7 @@ function fixture (name) {
 
 function testFixture (t, input, output) {
     t.equal(
-      postcss([ postcssRemoveShorthands() ])
+      postcss([ shorthandExpand() ])
         .process(fixture(input)).css,
       fixture(output)
     )
