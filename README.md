@@ -2,6 +2,21 @@
 
 Expand shorthand properties in your CSS.
 
+Note: This currently only supports a [limited list] of shorthand properties:
+
+- `background`
+- `font`
+- `padding`
+- `margin`
+- `border`
+- `border-width`
+- `border-style`
+- `border-color`
+- `border-top`
+- `border-right`
+- `border-bottom`
+- `border-left`
+
 ## Installation
 
 ```bash
