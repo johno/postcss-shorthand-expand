@@ -1,0 +1,32 @@
+{
+  "name": "postcss-remove-shorthands",
+  "description": "Remove CSS shorthand properties from your CSS.",
+  "author": "John Otander",
+  "version": "0.0.1",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/test.js | tap-dot",
+    "jshint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnotander/postcss-remove-shorthands.git"
+  },
+  "keywords": [
+
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnotander/postcss-remove-shorthands/issues"
+  },
+  "homepage": "https://github.com/johnotander/postcss-remove-shorthands",
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "*",
+    "tap-dot": "*",
+    "standard": "*"
+  }
+}
