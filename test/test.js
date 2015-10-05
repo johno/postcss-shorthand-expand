@@ -6,6 +6,8 @@ var postcss = require('postcss')
 var postcssRemoveShorthands = require('..')
 
 test('postcss-remove-shorthands', function (t) {
+  t.plan(1)
+
   testFixture(t, 'input.css', 'output.css')
 })
 

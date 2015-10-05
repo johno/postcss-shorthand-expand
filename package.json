@@ -23,6 +23,7 @@
   "homepage": "https://github.com/johnotander/postcss-remove-shorthands",
   "dependencies": {
     "css-shorthand-expand": "^1.0.1",
+    "is-css-shorthand": "^1.0.0",
     "postcss": "^5.0.8"
   },
   "devDependencies": {
