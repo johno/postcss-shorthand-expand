@@ -15,15 +15,16 @@
     "type": "git",
     "url": "https://github.com/johnotander/postcss-remove-shorthands.git"
   },
-  "keywords": [
-
-  ],
+  "keywords": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/johnotander/postcss-remove-shorthands/issues"
   },
   "homepage": "https://github.com/johnotander/postcss-remove-shorthands",
-  "dependencies": {},
+  "dependencies": {
+    "css-shorthand-expand": "^1.0.1",
+    "postcss": "^5.0.8"
+  },
   "devDependencies": {
     "tape": "*",
     "tap-dot": "*",

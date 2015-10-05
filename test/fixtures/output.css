@@ -1,0 +1,11 @@
+.some-background {
+  background-image: url(image.png);
+  background-repeat: no-repeat;
+  background-color: #ff0;
+}
+
+.some-font {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: sans-serif;
+}
