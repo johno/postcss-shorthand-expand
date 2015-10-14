@@ -12,13 +12,13 @@ test('postcss-shorthand-expand', function (t) {
 })
 
 function fixture (name) {
-    return fs.readFileSync('test/fixtures/' + name, 'utf8')
+  return fs.readFileSync('test/fixtures/' + name, 'utf8')
 }
 
 function testFixture (t, input, output) {
-    t.equal(
-      postcss([ shorthandExpand() ])
-        .process(fixture(input)).css,
-      fixture(output)
-    )
+  t.equal(
+    postcss([ shorthandExpand() ])
+      .process(fixture(input)).css,
+    fixture(output)
+  )
 }
