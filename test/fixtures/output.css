@@ -9,3 +9,7 @@
   font-size: 16px;
   line-height: 1.2;
 }
+
+.unhandled-shorthand {
+  list-style: none;
+}

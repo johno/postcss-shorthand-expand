@@ -5,3 +5,7 @@
 .some-font {
   font: 16px / 1.2 sans-serif;
 }
+
+.unhandled-shorthand {
+  list-style: none;
+}

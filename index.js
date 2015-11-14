@@ -18,8 +18,7 @@ module.exports = postcss.plugin('postcss-shorthand-expand', function () {
 
             declaration.remove()
           } catch (e) {
-            result.warn('postcss-shorthand-expand failed to expand a property', { node: declaration })
-            return
+            getExpansionFailureDescription(declaration, result)
           }
         }
       })
@@ -32,4 +31,12 @@ function isSupportedShorthand (shorthand) {
   return ['background', 'font', 'padding', 'margin', 'border', 'border-width',
           'border-style', 'border-color', 'border-top', 'border-right', 'border-left',
           'border-bottom'].indexOf(shorthand) >= 0
+}
+
+function getExpansionFailureDescription (decl, result) {
+  result.warn(
+    'postcss-shorthand-expand failed to expand a property ' +
+    decl.prop + ': ' + decl.value + ';',
+    { node: decl }
+  )
 }

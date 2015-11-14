@@ -8,13 +8,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tape test/test.js | tap-dot",
-    "jshint": "standard"
+    "test": "ava"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/postcss-shorthand-expand.git"
-  },
+  "repository": "johnotander/postcss-shorthand-expand",
   "keywords": [
     "css",
     "postcss",
@@ -23,18 +19,13 @@
     "expand"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/postcss-shorthand-expand/issues"
-  },
-  "homepage": "https://github.com/johnotander/postcss-shorthand-expand",
   "dependencies": {
     "css-shorthand-expand": "^1.0.1",
     "is-css-shorthand": "^1.0.0",
     "postcss": "^5.0.8"
   },
   "devDependencies": {
-    "tape": "*",
-    "tap-dot": "*",
-    "standard": "*"
+    "ava": "^0.4.2",
+    "postcss-reporter": "^1.3.0"
   }
 }

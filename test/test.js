@@ -1,24 +1,21 @@
-'use strict'
+import fs from 'fs'
+import test from 'ava'
+import postcss from 'postcss'
+import reporter from 'postcss-reporter'
+import shorthandExpand from '../'
 
-var fs = require('fs')
-var test = require('tape')
-var postcss = require('postcss')
-var shorthandExpand = require('..')
-
-test('postcss-shorthand-expand', function (t) {
-  t.plan(1)
-
+test('postcss-shorthand-expand', t => {
   testFixture(t, 'input.css', 'output.css')
+  t.end()
 })
 
 function fixture (name) {
-  return fs.readFileSync('test/fixtures/' + name, 'utf8')
+  return fs.readFileSync('fixtures/' + name, 'utf8')
 }
 
 function testFixture (t, input, output) {
-  t.equal(
-    postcss([ shorthandExpand() ])
-      .process(fixture(input)).css,
-    fixture(output)
-  )
+  const result = postcss([ shorthandExpand(), reporter() ])
+      .process(fixture(input))
+
+  t.same(result.css, fixture(output))
 }
