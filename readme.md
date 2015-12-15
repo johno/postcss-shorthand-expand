@@ -2,7 +2,7 @@
 
 Expand shorthand properties in your CSS.
 
-Note: This currently only supports a [limited list] of shorthand properties:
+Note: This currently only supports a [limited list](https://github.com/kapetan/css-shorthand-expand) of shorthand properties:
 
 - `background`
 - `font`
@@ -60,7 +60,7 @@ postcss([ shorthandExpand() ]).process(myCss).css
 }
 ```
 
-## Acknowledgements
+## Related
 
 * <https://github.com/kapetan/css-shorthand-expand>
 
